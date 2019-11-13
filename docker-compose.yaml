@@ -1,12 +1,17 @@
+<<<<<<< HEAD
 ﻿version: '3.4'
 networks:
   dockerapi:
     driver: bridge
 
+=======
+﻿version: '3'
+>>>>>>> fdb2c5cd4e345a5d612aa4e857940f4dcce5e2d3
 services:
   api:
     build: .
     ports:
+<<<<<<< HEAD
       - "5000:80"
     depends_on: 
       - db
@@ -26,3 +31,6 @@ services:
       - ./postgres-data:/var/lib/postgresql/data
     networks:
       - dockerapi
+=======
+      - "5000:80"
+>>>>>>> fdb2c5cd4e345a5d612aa4e857940f4dcce5e2d3
