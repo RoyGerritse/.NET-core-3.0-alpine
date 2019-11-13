@@ -10,4 +10,7 @@
   <ItemGroup>
     <Folder Include="Context\" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Controllers\WeatherForecastController.cs" />
+  </ItemGroup>
 </Project>
