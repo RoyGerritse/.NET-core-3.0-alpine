@@ -7,4 +7,10 @@
   <ItemGroup>
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Context\" />
+  </ItemGroup>
 </Project>
