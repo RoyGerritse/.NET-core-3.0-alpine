@@ -1,3 +1,4 @@
+using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -9,8 +10,6 @@ namespace Api
 {
     public class Startup
     {
-        private const string ConnectionString = "Host=db;Database=mydb;Username=roy;Password=pwd0123456789";
-
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -23,7 +22,8 @@ namespace Api
         {
             services.AddControllers();
 
-            services.AddDbContext<MyContext>(options => options.UseNpgsql(ConnectionString));
+            var connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING");
+            services.AddDbContext<MyContext>(options => options.UseNpgsql(connectionString));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
