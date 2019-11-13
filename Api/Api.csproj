@@ -5,15 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-  </ItemGroup>
-
-<<<<<<< HEAD
-  <ItemGroup>
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.0.1" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Context\" />
   </ItemGroup>
-=======
->>>>>>> fdb2c5cd4e345a5d612aa4e857940f4dcce5e2d3
 </Project>
