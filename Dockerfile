@@ -9,7 +9,7 @@ RUN dotnet restore
 # copy everything else and build app
 COPY Api/. ./Api/
 WORKDIR /app/Api
-RUN dotnet publish -c Release -r linux-musl-x64 -o out --self-contained
+RUN dotnet publish -c Release -r linux-musl-x64 -o out -p:PublishSingleFile=true --self-contained
 
 FROM mcr.microsoft.com/dotnet/core/runtime-deps:3.0-alpine AS runtime
 WORKDIR /app
