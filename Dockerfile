@@ -11,7 +11,7 @@ COPY Api/. ./Api/
 WORKDIR /app/Api
 RUN dotnet publish -c Release -r linux-musl-x64 -o out --self-contained
 
-FROM mcr.microsoft.com/dotnet/core/runtime:3.0-alpine AS runtime
+FROM mcr.microsoft.com/dotnet/core/runtime-deps:3.0-alpine AS runtime
 WORKDIR /app
 COPY --from=build /app/Api/out ./   
-ENTRYPOINT ["dotnet", "Api.dll"]
+ENTRYPOINT ["./Api"]
